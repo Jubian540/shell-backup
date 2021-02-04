@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sudo cp -b /etc/resolv.conf etc/resolv.conf
-sudo cp /usr/bin/qemu-aarch64-static usr/bin/
+sudo cp /usr/bin/qemu-*-static usr/bin/
 sudo cp  -r /etc/skel etc/
 
 sed -i s@/ports.ubuntu.com/@/mirrors.ustc.edu.cn/@g etc/apt/sources.list
