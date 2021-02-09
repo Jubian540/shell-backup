@@ -1,0 +1,5 @@
+{
+	"bridge": "br0",
+	"default-gateway": "192.168.2.2",
+	"registry-mirrors": ["https://docker.mirrors.ustc.edu.cn/"]
+}
