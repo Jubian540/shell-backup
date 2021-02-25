@@ -6,7 +6,9 @@ MKDIR=build-rootfs
 
 echo "start of $ROOTFS! output: $TARGET"
 
-sudo dd if=/dev/zero of=$TARGET bs=1G count=8 status=progress
+size=`du -sh $ROOTFS | awk '{print $1}'`
+
+sudo dd if=/dev/zero of=$TARGET bs=$size count=2 status=progress
 mkdir $MKDIR
 sudo mkfs.ext4 $TARGET
 sudo mount $TARGET $MKDIR
