@@ -9,6 +9,7 @@ echo "start of $ROOTFS! output: $TARGET"
 size=`du -sh $ROOTFS | awk '{print $1}'`
 
 sudo dd if=/dev/zero of=$TARGET bs=$size count=2 status=progress
+sudo rm -rf $MKDIR
 mkdir $MKDIR
 sudo mkfs.ext4 $TARGET
 sudo mount $TARGET $MKDIR
